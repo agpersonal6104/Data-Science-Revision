@@ -63,3 +63,6 @@ print(arr[arr>50])
 
 # greater than 50 and even
 print(arr[(arr>50) & (arr%2==0)])
+
+#find all numbers not divisible by 7
+print(arr[~(arr%7==0)])
