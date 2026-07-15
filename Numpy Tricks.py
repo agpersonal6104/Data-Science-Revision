@@ -48,3 +48,7 @@ print(np.where(a>50,0,a)) #replace 50 with 0
 # np.cumsum: calculate cumulative sum
 # np.cumprod: calculate cumulative product
 
+# np.percentile
+
+print(a)
+print(np.percentile(a, 100))
