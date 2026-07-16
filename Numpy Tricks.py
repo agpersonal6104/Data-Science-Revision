@@ -52,3 +52,24 @@ print(np.where(a>50,0,a)) #replace 50 with 0
 
 print(a)
 print(np.percentile(a, 100))
+
+print("----------------------")
+
+# np.corrcoef() : return pearsons product moment correlation coefficients
+#0-no corelation, 1-+ve corelation, -1: -ve corelation
+
+sal=np.array([20000,40000,25000,35000,60000])
+exp=np.array([1,3,2,4,2])
+print(np.corrcoef(sal,exp))
+
+# np.isin(): Checks for multiple ele in an array return boolean.
+
+# np.flip: reverses order of array on axis preserving shape.
+
+# np.put(): Replaces specific ele with a given value.
+
+# np.delete(): returns new array with deletion of subarray along mentioned axis.
+delete=np.array([1,2,4,2,4])
+print(delete)
+print(np.delete(delete,[1,2]))
+# 

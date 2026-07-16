@@ -29,6 +29,7 @@ print(c+d)
 
 print("--------------------------------------------")
 
+# Working with missing values
 e=np.arange(10)
 np.sin(e)
 
@@ -41,11 +42,3 @@ print(sigmoid(f))
 
 print("--------------------------------------------")
 
-#mean squared error
-actual=np.random.randint(1,50,25)
-predicted=np.random.randint(1,50,25)
-
-def mse(actual,predicted):
-    return np.mean((actual-predicted)**2)
-
-print(mse(actual,predicted))
