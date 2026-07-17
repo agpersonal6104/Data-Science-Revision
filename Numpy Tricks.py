@@ -71,5 +71,4 @@ print(np.corrcoef(sal,exp))
 # np.delete(): returns new array with deletion of subarray along mentioned axis.
 delete=np.array([1,2,4,2,4])
 print(delete)
-print(np.delete(delete,[1,2]))
-# 
+print(np.delete(delete,[1,2])) 
