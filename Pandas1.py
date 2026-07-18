@@ -82,3 +82,11 @@ print("----------------------------------")
 x=pd.Series([12,13,14,35,34,57,59,79])
 print(x[1]) #series only works in +ve indexing
 print(df.iloc[0])
+
+print("----------------------------------")
+
+#Slicing
+print(df[5:12])
+
+print("----------------------------------")
+print(df[-5:])
