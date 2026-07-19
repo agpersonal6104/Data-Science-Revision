@@ -90,3 +90,13 @@ print(df[5:12])
 
 print("----------------------------------")
 print(df[-5:])
+
+print("----------------------------------")
+
+# Type conversion
+
+print(list(df))
+print(dict(df))
+print('Aaj Ka Andha Kanoon' in df)
+
+print(100-table2)
