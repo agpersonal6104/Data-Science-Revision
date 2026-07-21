@@ -47,3 +47,10 @@ print('--------------------------------')
 # Write a function that can return the track records if 2 teams against each other
 
 #Important dataframe functions
+
+#astype
+print(ipl.info())
+ipl['ID']=ipl['ID'].astype('int32')
+
+print('--------------------------------')
+print(ipl.info())
