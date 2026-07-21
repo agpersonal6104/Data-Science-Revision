@@ -57,3 +57,30 @@ print('--------------------------------------')
 df2=df2.set_index('name')
 print(df2)
 
+print('---------------------------------------')
+
+print(data.head())
+
+#single row
+print(data.iloc[0])
+print(type(data.iloc[1]))
+
+#multiple rows
+print(data.iloc[0:5])
+print(data.iloc[5:16:2])
+
+#Fancy indexing
+print(data.iloc[[0,4,5]])
+
+print('-------------------------------------')
+
+print(data.loc[0])
+print(df2.loc['Ayush'])
+print(df2.loc['Ayush':'Ravi':3])
+
+
+print('----------------------------------------')
+
+# Selecting both Rows and Cols
+
+print(data.iloc[0:3,0:3])
