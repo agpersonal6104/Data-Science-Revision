@@ -109,4 +109,32 @@ print(movies.rename(columns={'title_x':'title','imdb_id':'imdb'}).columns)
 print('==============================')
 
 # unique(Series)
-print(ipl['Season'].unique())
+print(ipl['Season'].unique()) # Counts nan too
+
+#nunique: Doesnt count missing values
+
+print('======================================')
+
+# is null(Series and dataframe) : Checks for missing values and return boolean result
+# notnull(Series and dataframe) : opposite of isnul()
+# hasnans(Series) : Checks for atleast one missing value in a column
+# students.dropna(how='any') remove tuples with atleast null value
+# students.dropna(how='all') remove tuples with all values as null
+# students.dropna(subset=['name','college']) remove tuples with missing name and college
+
+# fillna(Series and dataframe) : fill nan values
+# drop_duplicates(Series and Dataframe) : drop duplicate tuples
+
+# Find the lastmatch played by Virat Kohli in Delhi
+
+ipl['all_players']=ipl['Team1Players']+ipl['Team2Players']
+print(ipl.head(2))
+
+def did_kolhi_play(player_list):
+    return 'V Kohli' in player_list
+
+ipl['did_kohli_play']=ipl['all_players'].apply(did_kolhi_play)
+print(ipl[(ipl['City']=='Delhi') & (ipl['did_kohli_play']==True)].drop_duplicates(subset=['City','did_kohli_play'],keep='first'))
+
+# drop(Series and dataframe) : Drops rows or cols
+# apply(Series and dataframe) : Applies new value to a given value after applying a function
