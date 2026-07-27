@@ -61,3 +61,37 @@ print('=====================================')
 print(movies.groupby('Genre').size())
 print('----------------------------------------')
 print(movies['Genre'].value_counts())
+
+print('=====================================')
+print(genres.first())
+print('-------------------------------------')
+print(genres.last())
+
+print('===================================')
+# get_group -> filtering
+print(genres.get_group('Fantasy'))
+print('-----------------------------------')
+print(movies[movies['Genre']=='Fantasy'])
+
+print('===================================')
+# groups: give u a dictionary with a keys(index) belonging to every group
+print(genres.groups)
+
+print('===================================')
+print(genres.describe())
+
+print('===================================')
+print(genres.nunique())
+
+print('===================================')
+# agg method
+
+# passing dict
+aggr=genres.agg({
+    'Runtime':'mean',
+    'IMDB_Rating':'mean',
+    'No_of_Votes':'sum'
+})
+print(aggr)
+print('----------------------------------')
+print(genres.agg(['min','max','mean']))
